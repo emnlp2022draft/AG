@@ -1,2 +1,2 @@
 # AGRank
-Code for the paper "AGRank: Augmented Graph-based Unsupervised Keyphrase Extraction"
+Code and datasets of the paper "AGRank: Augmented Graph-based Unsupervised Keyphrase Extraction"

@@ -34,7 +34,7 @@ def load_local_corenlp_pos_tagger():
 def get_candidate(sentence):
     tagged = ptagger.pos_tag_raw_text(sentence)
     text_obj = InputTextObj(tagged, 'en')
-    candidates, trees = extract_candidates(text_obj, repeat=True)  # , gram=3)
+    candidates = extract_candidates(text_obj, repeat=True)  # , gram=3)
 
     return candidates
 

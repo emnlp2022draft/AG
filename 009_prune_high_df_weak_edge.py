@@ -21,6 +21,8 @@ make_dir(save_path)
 files = os.listdir(edge_source_path)
 files = files[:]
 
+df_cut = 56  # the doc freq thresh got from 008 step-2
+
 # load candi_df_dict
 candi_df_dict = {}
 with open(data_path + 'candidate_df_dict/'+dataset+'_single_words_df.csv', newline='') as csvfile:
@@ -46,7 +48,7 @@ for n, file in enumerate(files):
                 continue
 
             # drop high df nodes
-            if candi_df_dict[node1] >= 56 or candi_df_dict[node2] >= 56:
+            if candi_df_dict[node1] >= df_cut or candi_df_dict[node2] >= df_cut:
                 continue
 
             found_punc = 0

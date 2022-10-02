@@ -49,7 +49,7 @@ for n, file in enumerate(files):
         else:
             df_dict[k] = 1
 
-    # print(n, 'th file', file)
+    print(n, 'th file', file)
 
 # save the df dict
 write_yes = True

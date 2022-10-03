@@ -11,7 +11,7 @@ tokenizer = nltk.data.load('tokenizers/punkt/english.pickle')
 
 start_time = time.time()
 
-path_list = ['SemEval2017']
+path_list = ['Nguyen2007']
 
 for item in path_list:
     dataset_path = item + '/'
@@ -24,7 +24,7 @@ for item in path_list:
     for i, file in enumerate(files):
         files[i] = file[:-4]
 
-    files = files[:1]
+    files = files[:]
 
     for n, file in enumerate(files):
 
@@ -34,7 +34,8 @@ for item in path_list:
             line = line.replace('\n','')
             if line:
                 text.append(line)
-        text = ''.join(text)
+        text[0] += '.'  # add a period for the title
+        text = ' '.join(text)
         # print(text)
 
         # replace or remove something for better sentences splitting

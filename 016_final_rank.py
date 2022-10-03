@@ -23,7 +23,7 @@ sent_pos_path = 'GraphRank/data/processed_'+dataset+'/sent_position_by_doc/'
 
 # load keys:
 all_keys = read_csv(keys_path)
-all_keys_dict = dict(zip([item[0][:-4] for item in all_keys], [item[1:] for item in all_keys]))
+all_keys_dict = dict(zip([item[0] for item in all_keys], [item[1:] for item in all_keys]))
 
 edge_source_1 = get_files(edge_path_1)
 edge_source_2 = get_files(edge_path_2)

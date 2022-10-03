@@ -84,7 +84,7 @@ def truncate_seq_pair(tokens_a, tokens_b, max_num_tokens, rng):
 
 
 # main
-dataset = 'SemEval2017'
+dataset = 'Nguyen2007'
 text_path = dataset + '/processed_docsutf8/'
 output_path = dataset + '/processed_' + dataset + '/'
 save_path = output_path + 'sentence_paired_text/'

@@ -96,7 +96,7 @@ def truncate_seq_pair(tokens_a, tokens_b, max_num_tokens, rng):
             trunc_tokens.pop()
 
 
-dataset = 'SemEval2017'
+dataset = 'Nguyen2007'
 text_path = dataset + '/processed_docsutf8/'
 output_path = dataset + '/processed_' + dataset + '/'
 save_path = output_path + 'sentence_paired_text/'
@@ -115,7 +115,7 @@ start_time = time.time()
 parser = argparse.ArgumentParser(description=__doc__)
 parser.add_argument("--num-docs", default=1000, type=int,help="Number of documents to use (default=1000).")
 parser.add_argument("--cased", default=False, action='store_true',help="Don't lowercase the input.")
-parser.add_argument("--max_sequence_length", default=512, type=int, help="Maximum input sequence length after tokenization (default=128).")
+parser.add_argument("--max_sequence_length", default=512, type=int, help="Maximum input sequence length after tokenization (default=512).")
 args = parser.parse_args()
 tokenizer = tokenization.FullTokenizer(vocab_file=os.path.join(bert_dir, "vocab.txt"), do_lower_case=not args.cased)
 

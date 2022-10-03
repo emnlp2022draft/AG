@@ -20,7 +20,7 @@ files = os.listdir(doc_path)
 files = files[:]
 
 
-save_path = project_path + 'data/processed_' + dataset +'doc_emb/'
+save_path = project_path + 'data/processed_' + dataset +'/doc_emb/'
 if not os.path.exists(save_path):
     os.makedirs(save_path)
 
